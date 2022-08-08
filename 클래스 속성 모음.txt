@@ -1,0 +1,43 @@
+class Monster
+{
+	constructor(X,Y,S,A,L,Score,url,F=false) {
+		this.x = X; // 최초 x 좌표
+		this.y = Y; // 최초 y 좌표
+		this.speed = S; // 몬스터 속도
+		this.atc = A; // 몬스터 공격력
+		this.Life = L; // 몬스터 생명력
+		this.score = Score; // 처치 점수
+		this.fly = F; // 몬스터 공중 여부
+		this.url = url;
+
+class Ball
+{
+	constructor(X,Y,arrow) {
+		this.x = X;
+		this.y = Y;
+		this.arrow = arrow;
+		this.speed = 16;
+		if (this.arrow=="left")
+			this.x -= 80
+		else
+			this.x += 80
+		this.images = ballImgs;
+	}
+
+class User
+{
+	// 객체 속성 설정
+	constructor(life, X, Y)
+	{
+		this.life = life; // 10
+		this.x = X; // 0
+		this.y = Y; // 0
+		this.normalUrl = "Chick/Chick/";
+		this.walkUrl = "Chick/Chick-walk/";
+		this.attackUrl = "Chick/Chick-attack/";
+		this.deadUrl = "Chick/Chick-dead/";
+		this.arrow = "left";
+		this.speed = 6;
+		this.jumpV = 190;
+		this.damage = 1;
+	}

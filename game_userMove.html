@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>코딩촌</title>
+<link rel="stylesheet" href="styles.css">
+<script src="localStorageFunction.js"></script>
+</head>
+<body>
+
+<!-- 뒷 배경 -->
+<canvas id="backgroundCanvas"></canvas>
+
+<!-- 게임 캔버스 -->
+<div id="canvasDiv" style="position: relative;width: 1280px;height: 720px;margin: auto;" tabindex="1">
+    <button id='button'>❚❚</button>
+    <input type='text' id='input' placeholder="console.log('hello world')">
+    <img src='코딩촌 이미지.png' id='img'>
+    <canvas style="position: absolute;top:0px;left:0px;" id="canvas" width="1280" height="720"></canvas>
+    <canvas style="position: absolute;top:0px;left:0px;" id="canvasGround" width="1280" height="720"></canvas>
+    <canvas style="position: absolute;top:0px;;left:0px;" id="canvasMonster" width="1280" height="720"></canvas>
+    <canvas style="position: absolute;top:0px;left:0px;" id="canvasUser" width="1280" height="720"></canvas>
+    <canvas style="position: absolute;top:0px;left:0px;" id="canvasBall" width="1280" height="720"></canvas>
+    <canvas style="position: absolute;top:0px;;left:0px;" id="canvasTimeScore" width="1280" height="720"></canvas>
+    <div id="gameOver" style="width: 1280px;height: 720px;">
+
+        <span id="title">&#60;&#47;게임종료&#62;</span>
+        <span id="aliveTime"></span>
+        <span id="myScore"></span>
+        <span id="myBestScore"></span>
+        <span id="worldBestScore"></span>
+        <img id="buttonEvent" src="powerbutton.png" alt="">
+
+
+        <img id="deadChick" src="Chick/Chick-dead.gif" alt="">
+    </div>
+    <div id="screen-blur">
+    </div>
+</div>
+
+
+<!-- 고정된 움직이는 짹짹이들 -->
+<div id="walkingChick">
+    <img class="chick" src="" alt="짹짹이" >
+    <img class="chick" src="" alt="짹짹이" >
+    <img class="chick" src="" alt="짹짹이">
+    <img class="chick" src="" alt="짹짹이" >
+</div>
+
+
+<!-- 인게임 스크립트 -->
+<script type="text/javascript" src="script.js"></script>
+
+<!-- 화면이 로딩된 이후 5초가 지나면 innerWidth 를 기준으로 페이지 하단의 짹짹이
+세팅 -->
+<script type="text/javascript" src="script_walkingChick.js"></script>
+<!-- 배경색상변환 -->
+
+<script type="text/javascript" src="script_background.js"></script>
+</body></html>
